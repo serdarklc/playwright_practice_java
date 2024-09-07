@@ -97,6 +97,5 @@ public class CheckBox {
             folders = Driver.getPage().locator(".rct-text").nth(i);
             assertFalse(folders.isVisible());
         }
-
     }
 }

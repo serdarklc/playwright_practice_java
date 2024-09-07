@@ -30,7 +30,7 @@ public class TextBox {
 
     @Test
     void navigateElementsPage() {
-        assertThat(Driver.getPage()).hasURL("https://demoqa.com/elements");
+        assertThat(Driver.getPage()).hasURL("https://demoqa.com/text-box");
     }
 
     @Test
@@ -44,7 +44,6 @@ public class TextBox {
         //Submit TextBox using CRM data
         CRMUtil.loginTextBox();
         BrowserUtils.sleepWithThread(3);
-
         //Write result after clicking submit
         for (int i = 0; i < 4; i++) {
             Locator submitedField = Driver.getPage().locator("div[class='border col-md-12 col-sm-12'] p").nth(i);
