@@ -31,11 +31,13 @@ public class Driver {
                 case "chrome":
                     browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
                     page = browser.newContext().newPage();
+                    page.setViewportSize(1500, 1000);
                     break;
 
                 case "firefox":
                     browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
                     page = browser.newContext().newPage();
+                    page.setViewportSize(1500, 1000);
                     break;
             }
         }
